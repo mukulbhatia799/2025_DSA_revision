@@ -26,5 +26,6 @@ public class Ques2 {
         for(char ch: str.toString().toCharArray()) {
             System.out.print(ch);
         }
+        sc.close();
     }
 }

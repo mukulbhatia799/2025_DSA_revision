@@ -18,5 +18,7 @@ public class Ques1 {
 
         if(ind == -1) System.out.println("Not found!!"); 
         else System.out.println("found at " + ind);
+
+        sc.close();
     }
 }
