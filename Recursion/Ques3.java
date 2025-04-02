@@ -41,5 +41,7 @@ public class Ques3 {
 
         ans.reverse();
         System.out.println(ans);
+
+        sc.close();
     }
 }

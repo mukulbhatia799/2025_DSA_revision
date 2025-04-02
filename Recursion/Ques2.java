@@ -1,6 +1,5 @@
 // reverse a string RE
 
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Ques2 {

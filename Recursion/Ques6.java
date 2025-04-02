@@ -29,5 +29,7 @@ public class Ques6 {
         removePart(s_sb, part_sb, 0);
 
         System.out.println(s_sb);
+
+        sc.close();
     }
 }
