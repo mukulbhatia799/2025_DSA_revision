@@ -23,5 +23,7 @@ public class Ques7 {
         int answer = findAnsRE(prices, 0, miniPrice, maxProfit);
 
         System.out.println("maxProfit: " + answer);
+
+        sc.close();
     }
 }
