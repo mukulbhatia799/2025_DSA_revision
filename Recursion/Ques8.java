@@ -1,6 +1,4 @@
 // house robber problem
-import java.util.Scanner;
-
 public class Ques8 {
     public static int findAns(int[] nums, int ind) {
         if(ind >= nums.length) return 0;
