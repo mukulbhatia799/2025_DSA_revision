@@ -61,7 +61,7 @@ public class Ques1 {
     public static void mergeSort(List<Integer> arr, int start, int end, int[] count) {
         if(start >= end) return ;
 
-        int mid = (start+end)/2;
+        int mid = (start+end) >> 1;
 
         mergeSort(arr, start, mid, count);
         mergeSort(arr, mid+1, end, count);
