@@ -1,8 +1,8 @@
 // beautiful arrangement
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.Collections;
+// import java.util.List;
 
 // ====== using permutation method gives tle - t.c -> O(n!) ====== 
 
