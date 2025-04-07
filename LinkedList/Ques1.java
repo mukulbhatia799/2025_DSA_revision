@@ -1,11 +1,11 @@
 // Delete N nodes from M nodes
 
 class Node {
-    int data;
+    int val;
     Node next;
 
-    Node(int data) {
-        this.data = data;
+    Node(int val) {
+        this.val = val;
         this.next = null;
     }
 }
@@ -70,8 +70,8 @@ class CustomLinkedList {
         Node temp = head;
 
         while(temp != null) {
-            if(temp.next != null) System.out.print(temp.data + "->");
-            else System.out.print(temp.data);
+            if(temp.next != null) System.out.print(temp.val + "->");
+            else System.out.print(temp.val);
             temp = temp.next;
         }
         System.out.println();
