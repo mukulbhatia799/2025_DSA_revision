@@ -99,16 +99,26 @@ class CustomLinkedList {
             temp = temp2;
         }
     }
+    public Node findMidNode() {
+        Node slow = head, fast = head;
+
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+    }
 }
 
 public class Ques1 {
     public static void main(String[] args) {
-        // int[] arr = {1,2,3,4,5,6,7,8,9,10,11};
-        // int m = 1, n = 3;
+        int[] arr = {1,2,3,4,5,6,7,8,9,10,11};
+        int m = 1, n = 3;
         // int m = 3, n = 1;
 
-        int[] arr = {9,3,7,7,9,10,8,2};
-        int m = 1, n = 2;
+        // int[] arr = {9,3,7,7,9,10,8,2};
+        // int m = 1, n = 2;
 
         CustomLinkedList lls = new CustomLinkedList();
         for(int i = 0; i < arr.length; i++) {
@@ -117,7 +127,11 @@ public class Ques1 {
         
         lls.printList();
         lls.deleteNAFterMNodes(lls, n, m);
-        lls.printList();        
+        lls.printList();    
+        
+        Node midNode = lls.findMidNode();
+        if(midNode != null) System.out.println("mid node val: " + midNode.val);
+        else System.out.println("list is empty!!");
         
     }
 }
