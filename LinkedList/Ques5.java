@@ -1,3 +1,5 @@
+// Sort list using merge Sort - change the next pointer address, don't swap the values!!!
+
 class ListNode {
     int val;
     ListNode next;
