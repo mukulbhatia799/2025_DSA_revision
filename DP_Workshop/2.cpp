@@ -6,7 +6,8 @@ bool canPlaceCheck(int row, int col, vector<int> &currPlacedQueen) {
     for(int i = 0; i < row; i++) {
         int prow = i;
         int pQueen = currPlacedQueen[i];
-
+        
+        // (abs(prow-row) == abs(pQueen-col) -> this condition detects diagonal threats between the current queen and all previously placed queens.
         if(col == pQueen || (abs(prow-row) == abs(pQueen-col))) {
             return false;
         }
