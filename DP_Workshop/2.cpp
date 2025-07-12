@@ -31,7 +31,7 @@ void placeQueen(int n, vector<vector<int>> &placedQueenColArr, vector<int> currP
 }
 
 int main() {
-    int n = 4;
+    int n = 8;
     vector<vector<int>> placedQueenColArr;
     vector<int> currPlacedQueen(n, -1);
     placeQueen(n, placedQueenColArr, currPlacedQueen, 0);
@@ -48,6 +48,8 @@ int main() {
             cout << endl;
         }
     }
+
+    cout << endl << "Total: " << placedQueenColArr.size() << endl;
 
     return 0;
 }
