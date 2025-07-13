@@ -1,3 +1,5 @@
+// Queens on chessboard -> N Queen problem
+
 #include<bits/stdc++.h>
 using namespace std;
 
