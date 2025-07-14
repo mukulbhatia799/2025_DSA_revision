@@ -2,7 +2,7 @@
     There are N items
         x1, x2, x3 ... xn
     
-        Find if a subset of the items exists that sums up to target -> T
+        Find if a subarray of the items exists that sums up to target -> T
 
         Point: In array, subsets* and subsequences* word means the same. For continuous array, we use subarrays* word
 
