@@ -35,6 +35,7 @@ bool solve(int n, int t, int arr[], vector<vector<int>> &dp, int ptr, int currSu
 
     // not take
     bool notTake = solve(n, t, arr, dp, ptr+1, currSum);
+    
     return dp[ptr][currSum] = (take || notTake);
 }
 
