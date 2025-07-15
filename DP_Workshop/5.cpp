@@ -2,9 +2,9 @@
     There are N items
         x1, x2, x3 ... xn
     
-        Find if a subarray of the items exists that sums up to target -> T
+        Find if a subset of the items exists that sums up to target -> T
 
-        Point: In array, subsets* and subsequences* word means the same. For continuous array, we use subarrays* word
+        Point: In array, subsets* and subsequences* word means the same(non-contiguous). For continuous array, we use subarrays* word.
 
         eg: {1, 2, 5, 9}
 
@@ -18,39 +18,28 @@
 #include<vector>
 using namespace std;
 
-bool solve(int n, int t, int arr[], int ptr, int currSum, vector<vector<int>> dp) {
-    if(currSum == t) return true;
-
-    if(currSum > t) return false;
-
+bool solve(int n, int t, int arr[], int ptr, int currSum) {
     if(ptr == n) {
+        if(currSum == t) return true;
         return false;
     }
 
-    if(dp[ptr][currSum] != -1) return dp[ptr][currSum];     // You might think why the dp on subsets problem of array, draw a tree and know!!. There are (2*(level+1))/2 similar calls on each level. So, this can be reduced using dp which will tell that at this state we have previously got the subsets in future calls.
-
+    bool take = false;
     // take
-    bool take = solve(n, t, arr, ptr+1, currSum+arr[ptr], dp);
+    if(currSum+arr[ptr] <= t) take = solve(n, t, arr, ptr+1, currSum+arr[ptr]);
 
     // not take
-    currSum = 0;
-    bool notTake = solve(n, t, arr, ptr+1, currSum, dp);
-
-    return dp[ptr][currSum] = (take || notTake);
+    bool notTake = solve(n, t, arr, ptr+1, currSum);
+    return (take || notTake);
 }
 
 int main() {
-    int n = 4, t = 3;
+    int n = 4, t = 4;
 
     int arr[n] = {1, 2, 5, 9};
-    vector<vector<int>> dp(n, vector<int>(n, -1));
 
-    if(solve(n, t, arr, 0, 0, dp)) {
-        cout << "yes" << endl;
-    }
-    else {
-        cout << "no" << endl;
-    }
+    cout << "Result: " << solve(n, t, arr, 0, 0);
+    
 
     return 0;
 }
