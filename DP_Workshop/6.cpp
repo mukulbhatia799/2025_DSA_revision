@@ -12,8 +12,6 @@ void solve(int n, int t, int arr[], int ptr, int currSum, vector<int> currSubset
         return ;
     }
 
-
-
     // take
     currSubset.push_back(arr[ptr]);
     solve(n, t, arr, ptr+1, currSum+arr[ptr], currSubset, allSubsets);

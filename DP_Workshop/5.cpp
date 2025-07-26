@@ -4,7 +4,7 @@
     
         Find if a subset of the items exists that sums up to target -> T
 
-        Point: In array, subsets* and subsequences* word means the same(non-contiguous). For continuous array, we use subarrays* word.
+        Point: In array, subsets* and subsequences* word means (non-contiguous). For continuous array, we use subarrays* word.
 
         eg: {1, 2, 5, 9}
 
@@ -17,7 +17,6 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-
 
 bool solve(int n, int t, int arr[], vector<vector<int>> &dp, int ptr, int currSum) {
     if(ptr == n) {
@@ -41,10 +40,10 @@ bool solve(int n, int t, int arr[], vector<vector<int>> &dp, int ptr, int currSu
 
 int main() {
     // int n = 4, t = 16;
-    int n = 5, t = 4;
+    int n = 5, t = 6;
 
-    // int arr[n] = {1, 2, 5, 9};
-    int arr[n] = {1, 1, 1, 1, 1};
+    int arr[n] = {1, 2, 5, 9};
+    // int arr[n] = {1, 1, 1, 1, 1};
     vector<vector<int>> dp(n+1, vector<int>(t+1, -1));
 
     cout << "Result: " << solve(n, t, arr, dp, 0, 0) << endl;    
